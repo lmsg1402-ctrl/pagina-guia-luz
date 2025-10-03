@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Luz y Fortuna ✨ Despierta tu Prosperidad</title>
+    <meta name="description" content="Conecta con tu energía interior y atrae bienestar. Tarot, horóscopo, amor, suerte y protección espiritual.">
+    <meta property="og:title" content="Guía de Luz y Fortuna ✨ Despierta tu Prosperidad">
+    <meta property="og:description" content="Descubre tu camino hacia la prosperidad y el bienestar. Consejos espirituales, tiradas de tarot y guía para atraer la buena suerte.">
+    <meta property="og:image" content="https://storage.googleapis.com/g.co/generative-ai/prompts/684d0b1686c679b8">
+    <meta property="og:url" content="https://ejemplo.com/guia-de-luz-y-fortuna">
+    <meta property="og:type" content="website">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6a0578; /* Morado Oscuro Místico */
+            --secondary-color: #4b0082; /* Índigo Profundo */
+            --accent-color: #ffc400; /* Dorado Brillante */
+            --text-color: #e0e0e0; /* Gris Claro */
+            --dark-bg: #121212; /* Fondo casi negro */
+        }
+	
+	/* REGLA 1: ESTABLECER EL ANCHO MÁXIMO PARA TODOS LOS CONTENEDORES DE IMAGEN/VIDEO */
+	/* Esto afectará la caja que se abre al hacer clic */
+	.img-or-video-wrapper {
+	    /* Establece un ancho máximo del 60% al 80% del espacio disponible */
+	    max-width: 80% !important; 
+	    margin-left: auto;
+	    margin-right: auto;
+	}
+
+	/* REGLA 2: ASEGURAR QUE LA IMAGEN/VIDEO LLENE ESE NUEVO CONTENEDOR */
+	/* Esto fuerza a que la imagen se adapte al 80% que acabamos de definir */
+	.img-or-video-wrapper img,
+	.img-or-video-wrapper video {
+	    width: 100% !important; /* Llena el 80% del contenedor */
+	    height: auto !important;
+	    display: block;
+	}
+
+	/* Estilo para las ventanas emergentes (modals) */
+	.modal {
+	    display: none;
+	    position: fixed;
+	    z-index: 10;
+	    left: 0;
+	    top: 0;
+	    width: 100%;
+	    height: 100%;
+	    overflow: auto;
+	    background-color: rgba(0,0,0,0.8);
+	    padding-top: 60px;
+	}
+
+	.modal-content {
+    	    margin: 5% auto;
+            width: 80%;
+            max-width: 900px;
+            background: #000;
+            border-radius: 10px;
+            padding: 20px;
+            position: relative;
+	}
+
+	.close-btn {
+    	    color: #fff;
+    	    font-size: 40px;
+    	    font-weight: bold;
+    	    position: absolute;
+    	    top: 10px;
+    	    right: 25px;
+    	    cursor: pointer;
+    	    transition: 0.3s;
+	}
+
+	.welcome-message {
+   	   background-color: var(--primary-color);
+           color: #fff;
+           text-align: center;
+           padding: 2.5rem 1rem;
+           font-family: 'Montserrat', sans-serif;
+	}
+
+	.welcome-message h2 {
+    	    font-size: 2.2rem;
+	    font-weight: 700;
+	    margin-bottom: 1rem;
+	    color: #fff;
+	    font-family: 'Cinzel', serif;
+	}
+
+	.welcome-message p {
+	    font-size: 1.2rem;
+	    margin-top: 0;
+	    line-height: 1.6;
+	    max-width: 800px;
+	    margin-left: auto;
+	    margin-right: auto;
+	}	
+
+	.testimonials-section {
+    	    background-color: #0d0111;
+    	    padding: 4rem 1rem;
+	    text-align: center;
+	    color: #fff;
+	}
+
+	.testimonials-section h2 {
+	    font-family: 'Cinzel', serif;
+	    font-size: 2.5rem;
+	    margin-bottom: 3rem;
+	    position: relative;
+	    display: inline-block;
+	}
+
+	.testimonials-section h2::after {
+	    content: '';
+	    position: absolute;
+	    bottom: -10px;
+	    left: 50%;
+	    transform: translateX(-50%);
+	    width: 60px;
+	    height: 3px;
+	    background-color: #ffc107;
+	}
+
+	.testimonial-grid {
+	    display: grid;
+	    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	    gap: 2rem;
+	
+	}
+
+	.testimonial-card {
+	    background: rgba(45, 1, 62, 0.7);
+	    padding: 2rem;
+	    border-radius: 15px;
+	    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+	    border-left: 5px solid #ffc107;
+	    position: relative;
+	    text-align: left;
+	}
+
+	.testimonial-card p {
+	    font-size: 1rem;
+	    font-style: italic;
+	    line-height: 1.6;
+	}
+
+	.testimonial-card span {
+	    display: block;
+	    margin-top: 1rem;
+	    font-weight: 700;
+	    color: #ffc107;
+	}
+
+	.close-btn:hover, .close-btn:focus {
+    	    color: #bbb;
+    	    text-decoration: none;
+    	    cursor: pointer;
+	}
+
+	.gallery-container {
+    	    display: grid;
+ 	    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	    gap: 15px;
+	}
+
+	.modal-content p {
+	    font-size: 1.1rem; /* Puedes ajustar este valor */
+	}
+	
+	.gallery-container img {
+	    width: 100%;
+	    height: auto;
+	    border-radius: 8px;
+  	    display: block;
+	    transition: transform 0.3s;
+
+	}
+
+	.gallery-container img:hover {
+    	    transform: scale(1.05);
+	
+	}
+
+	body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            /* CAMBIO DE FONDO: NUEVA IMAGEN ESTELAR */
+            background: url('fondo_estelar.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+        }
+
+        header {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2.5rem 1rem;
+            text-align: center;
+            position: relative;
+            animation: fadeIn 1.5s ease-in-out;
+            border-bottom: 5px solid var(--accent-color);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+        }
+
+        header h1 {
+            font-family: 'Cinzel', serif;
+            margin: 0;
+            font-size: 3rem;
+            animation: glow 2s infinite alternate;
+            text-shadow: 0 0 10px rgba(255,255,255,0.7);
+        }
+
+        header p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 1rem auto 0;
+            font-weight: 700;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 8px var(--accent-color), 0 0 15px rgba(255, 255, 255, 0.4); }
+            to { text-shadow: 0 0 18px var(--accent-color), 0 0 30px rgba(255, 255, 255, 0.8); }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 2rem;
+        }
+
+	.intro-section, .services-section, .contact-section, .video-promo {
+	            /* CAMBIO CLAVE: AHORA USA LA NUEVA IMAGEN CON LUZ RADIANTE */
+	            background: url('fondo_radiante.png') no-repeat center center;
+	            background-size: cover;
+	            background-color: rgba(20, 20, 40, 0.9); /* Un respaldo por si la imagen no carga */
+	            padding: 4rem;
+	            margin-bottom: 2rem;
+	            border-radius: 15px;
+	            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+	            border: 1px solid rgba(255, 255, 255, 0.1);
+	}
+
+        .intro-section {
+            text-align: center;
+        }
+
+        /* ESTILOS MEJORADOS PARA TÍTULOS H2 - MÁS LLAMATIVOS Y MISTERIOSOS */
+        .intro-section h2, .services-section h2, .contact-section h2, .video-promo h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 2rem;
+            text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color); /* Sombra más intensa */
+            letter-spacing: 1.5px; /* Pequeño espaciado para más misterio */
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+	    place-items: center; /* Esta línea centrará todos los elementos */
+        }
+
+     .video-promo img {
+            max-width: 65%; /* DIMENSIÓN DE LA IMAGEN GIF REDUCIDA */
+            height: auto;
+            display: block; /* Para centrar la imagen */
+            margin: 2rem auto; /* Para centrar la imagen */
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            border: 3px solid var(--accent-color);
+        }
+
+     .service-card {
+            background-color: var(--secondary-color);
+            padding: 2rem; /* VALOR DE RELLENO REDUCIDO */
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+            transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 2px solid var(--primary-color);
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 18px 35px rgba(0,0,0,0.7);
+            background-color: var(--primary-color);
+        }
+        
+        .service-card .img-or-video-wrapper {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+            border: 4px solid var(--accent-color);
+            box-shadow: 0 0 15px rgba(255, 196, 0, 0.6);
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+        }
+
+        .service-card .img-or-video-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover .img-or-video-wrapper img {
+            transform: scale(1.1);
+        }
+
+        /* ESTILOS MEJORADOS PARA TÍTULOS H3 - MÁS LLAMATIVOS Y MISTERIOSOS */
+        .service-card h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--accent-color);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 5px var(--text-color), 0 0 10px var(--text-color); /* Sombra más intensa */
+            letter-spacing: 0.8px;
+            text-align: center;
+        }
+
+        .service-card p {
+            font-size: 1.1rem;
+            color: var(--text-color);
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: auto;
+            background-color: var(--secondary-color);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+            border: 2px solid var(--primary-color);
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: calc(100% - 2rem);
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--primary-color);
+            border-radius: 8px;
+            background-color: #333;
+            color: white;
+            font-size: 1.1rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 10px rgba(255, 196, 0, 0.5);
+            outline: none;
+        }
+
+        .contact-form button {
+            background-color: var(--accent-color);
+            color: var(--dark-bg);
+            border: none;
+            padding: 1.2rem 2.5rem;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 15px rgba(255, 196, 0, 0.4);
+        }
+
+        .contact-form button:hover {
+            background-color: #ffdb58;
+            transform: translateY(-3px);
+            box-shadow: 6px 20px rgba(255, 196, 0, 0.6);
+        }
+	
+	footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #000;
+            color: rgba(255, 255, 255, 0.6);
+            border-top: 3px solid var(--accent-color);
+        }
+	
+	/* Estilo para que la última tarjeta ocupe todo el ancho */
+	.services-grid .service-card:last-child {
+	     grid-column: 1 / -1;
+	}
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            header p {
+                font-size: 1.1rem;
+            }
+            .container {
+                padding: 1rem;
+            }
+            .intro-section, .services-section, .contact-section, .video-promo {
+                padding: 2rem;
+                margin-bottom: 1.5rem;
+            }
+            .intro-section h2, .services-section h2, .contact-section h2, .video-promo h2 {
+                font-size: 2rem;
+            }
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .service-card h3 {
+                font-size: 1.5rem;
+            }
+            .video-promo img {
+                max-width: 95%; /* Ajuste para móviles */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Guía de Luz y Fortuna ✨</h1>
+        <p>✨ Despierta tu energía interior y atrae el bienestar que mereces ✨</p>
+    </header>
+
+    <main class="container">
+        <section id="inicio" class="intro-section">
+            <h2>¡Tu Portal hacia la Prosperidad y la Paz Interior! 🌟</h2>
+            <p>En "Guía de Luz y Fortuna" te invitamos a un viaje de autodescubrimiento y transformación. Conecta con las energías universales para manifestar tus deseos, encontrar claridad y proteger tu espíritu. ¡Tu destino te espera!</p>
+        </section>
+
+        <section id="servicios" class="services-section">
+            <h2>Descubre Nuestros Poderosos Servicios Esotéricos 🌌</h2>
+            <div class="services-grid">
+                <div class="service-card" id="fortuna">
+                    <div class="img-or-video-wrapper">
+                        <img src="fortuna.jpg" alt="Amuleto de la suerte">
+                    </div>
+                    <h3>🍀 Fortuna Universal: Atrae la Suerte a tu Vida</h3>
+                    <p>Rituales ancestrales para potenciar tu suerte en sorteos, juegos de azar y oportunidades inesperadas. ¡Descubre tus números mágicos y abre las puertas a la abundancia!</p>
+                </div>
+                <div class="service-card" id="amor">
+                    <div class="img-or-video-wrapper">
+                        <img src="amor.jpg" alt="Pareja con energía">
+                    </div>
+                    <h3>❤️ Amor y Energía: Reconecta con tu Alma Gemela</h3>
+                    <p>Guía para fortalecer lazos de amor, atraer a tu compañero ideal o superar engaños y desamores. Recupera la pasión y armonía en tus relaciones.</p>
+                </div>
+                <div class="service-card" id="proteccion" >
+                    <div class="img-or-video-wrapper">
+                        <img src="proteccion.jpg" alt="Escudo de protección">
+                    </div>
+                    <h3>🛡️ Protección y Bienestar: Libérate de lo Negativo</h3>
+                    <p>Limpiezas energéticas profundas para alejar envidias, maldiciones y malas vibras. Protege tu aura y revitaliza tu espíritu para vivir en paz y armonía.</p>
+                </div>
+                <div class="service-card" id="consultas">
+                    <div class="img-or-video-wrapper">
+                        <img src="consultas.jpg" alt="Lectura de tarot-Ayuda Maestral">
+                    </div>
+                    <h3>🃏 Consultas Espirituales: Desvela los Secretos del Destino</h3>
+                    <p>Sesiones de Tarot, Oráculo y lectura de sueños para obtener respuestas claras sobre tu futuro, tomar decisiones importantes y entender tu propósito de vida.</p>
+                </p>
+                </div>
+            </div>
+        </section>
+
+	<section id="video-promo" class="video-promo">
+	    <h2>🎁 TU REGALO ESPIRITUAL: ¡Acceso GRATIS a la Guía de Luz y Fortuna! 🗝️</h2>
+	    <p style="text-align: center; margin-top: 1.5rem; font-style: italic; font-size: 1.1em;">
+	        Descubre el poder de la conexión espiritual y cómo podemos ayudarte en tu camino.
+	    </p>
+    
+	    <div style="text-align: center; margin: 2rem auto;">
+	        <video width="75%" controls autoplay muted loop>
+	            <source src="LA GUIA DE LUZ Y FORTUNA.mp4" type="video/mp4">
+	            Tu navegador no soporta el tag de video.
+	        </video>
+	    </div>
+	</section>
+
+	<h2 style="font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent-color); margin-bottom: 1.5rem; text-shadow: 0 0 15px rgba(255, 196, 0, 0.8);">
+	    🔑 ¡TU ACCESO GRATUITO ESPERA EN MESSENGER! 🗝️
+        </h2>
+
+	<p style="font-family: 'Montserrat', sans-serif; font-size: 1.3em; font-weight: 700; color: white; margin-bottom: 30px;">
+        Para reclamar la Guía de Luz y Fortuna **sin costo**, debes interactuar directamente con nuestro Guía Espiritual.
+	</p>
+
+        <div style="display: inline-block; padding: 20px 40px; background-color: #ffc400; border-radius: 12px; box-shadow: 0 8px 25px rgba(255, 196, 0, 0.7), 0 0 10px white; cursor: default;">
+	    <span style="font-family: 'Montserrat', sans-serif; font-weight: 900; color: white; font-size: 1.5em; letter-spacing: 1px;"> Haga Clic en el Botón "ENVIAR MENSAJE"
+		
+	   </span>
+	  </div>
+        </section>
+
+	<section id="testimonios" class="testimonials-section">
+    	   <div class="container">
+               <h2>Lo que dicen nuestros clientes ✨</h2>
+               <div class="testimonial-grid">
+            	   <div class="testimonial-card">
+                       <p>"La consulta me dio la claridad que necesitaba. La guía fue muy precisa y me ayudó a tomar una decisión importante."</p>
+                       <span>— Cliente desde Estados Unidos-Mexico</span>
+               </div>
+               <div class="testimonial-card">
+		   <p>"La lectura del tarot fue asombrosa, me sentí en paz y ahora sé qué camino seguir. ¡Recomiendo totalmente este servicio!"</p>
+		   <span>— Cliente en la Web</span>
+	       </div>
+               <div class="testimonial-card">
+                   <p>"Me ayudaron a atraer la prosperidad a mi vida. Recomiendo este servicio al 100%."</p>
+                   <span>— Testimonio anónimo</span>
+               </div>
+           </div>
+       </div>
+   </section>
+	
+    </main>
+
+    <footer>
+        <p>Copyright © 2025 Guía de Luz y Fortuna. Todos los derechos reservados. | <a href="#" style="color: var(--accent-color); text-decoration: none;">Política de Privacidad</a></p>
+    </footer>
+
+    <div id="modal-fortuna" class="modal">
+	<div class="modal-content">
+	    <span class="close-btn">&times;</span>
+	    <div class="gallery-container">
+	        <img src="./fortuna(2).jpg" alt="Lotería">
+		<img src="./fortuna(1).jpg" alt="Lotería Raspa Raspa">
+		<img src="./fortuna(3).jpg" alt="Suerte En La Lotería Lotto">
+		<img src="./fortuna(5).jpg" alt="Triunfo">
+		<img src="./fortuna(6).jpg" alt="Mucha Abundancia">
+	    </div>
+	</div>
+    </div>
+
+    <div id="modal-amor" class="modal">
+	<div class="modal-content">
+	    <span class="close-btn">&times;</span>
+	    <div class="gallery-container">
+	        <img src="./amor(2).jpg" alt="Consulta">
+		<img src="./amor(3).jpg" alt="Revelaciones">
+		<img src="./amor(6).jpg" alt="Separación">
+		<img src="./amor(5).jpg" alt="Ayuda Espiritual">
+	    </div>
+	</div>
+    </div>
+
+    <div id="modal-proteccion" class="modal">
+	<div class="modal-content">
+	    <span class="close-btn">&times;</span>
+	    <div class="gallery-container">
+		<img src="./proteccion 1.jpg" alt="Ayuda Estelar">
+		<img src="./proteccion 2.jpg" alt="Espiritualidad">
+		
+	     </div>
+	 </div>
+     </div>
+     
+     <div id="modal-consulta" class="modal">
+	<div class="modal-content">
+	    <span class="close-btn">&times;</span>
+	    <div class="gallery-container">
+		<img src="./consulta(2).jpg" alt="Ayuda Maestral">
+		<img src="./consulta(4).jpg" alt="Consulta al Taron y Cartas Ancestrales">
+		<img src="./consulta(5).jpg" alt="Ayuda Espiritual">
+	     </div>
+	 </div>
+     </div>
+
+     <div id="modal-consultas" class="modal">
+	 <div class="modal-content">
+	     <span class="close-btn">&times;</span>
+	     <div class="gallery-container">
+		 <img src="./amor(2).jpg" alt="Consulta">
+		 <img src="./amor(3).jpg" alt="Revelaciones">
+		 <img src="./amor(6).jpg" alt="Separación">
+		 <img src="./amor(5).jpg" alt="Ayuda Espiritual">
+		 <img src="./consulta(2).jpg" alt="Ayuda Maestral">
+		 <img src="./consultas(4).jpg" alt="Consulta al Tarot y Cartas Ancestrales">
+		 <img src="./consultas(5).jpg" alt="Ayuda Espiritual">
+		 <img src="./fortuna(2).jpg" alt="Lotería">
+		 <img src="./fortuna(1).jpg" alt="Lotería Raspa Raspa">
+		 <img src="./fortuna(3).jpg" alt="Suerte en la loteria Lotto">
+		 <img src="./fortuna(5).jpg" alt="Triunfo">
+		 <img src="./fortuna(6).jpg" alt="Mucha Abundancia">
+   		 <img src="./proteccion 1.jpg" alt="Ayuda Estelar">
+		 <img src="./proteccion 2.jpg" alt="Espiritualidad">
+	      </div>
+	  </div>
+      </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const serviceCards = document.querySelectorAll('.service-card');
+        const modals = document.querySelectorAll('.modal');
+        const closeButtons = document.querySelectorAll('.close-btn');
+
+        serviceCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const serviceId = card.id;
+                const modalId = `modal-${serviceId}`;
+                const modal = document.getElementById(modalId);
+                if (modal) {
+                    modal.style.display = 'block';
+                }
+            });
+        });
+
+        closeButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const modal = btn.closest('.modal');
+                if (modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+
+        window.addEventListener('click', (event) => {
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
